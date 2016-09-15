@@ -1,0 +1,24 @@
+<div>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                        <span>Contact Editor</span>
+                          <!-- fill up the space between left and right area -->
+                          <span flex></span>
+                          <md-button ng-click="$ctrl.ok($ctrl.contact)" class="btn btn-primary" ng-disabled="$ctrl.contactForm.$invalid">
+                                OK
+                          </md-button>
+                          <md-button ng-click="$ctrl.cancel()" class="btn btn-primary" ng-disabled="$ctrl.rentalForm.$invalid">
+                                Cancel
+                          </md-button>
+            </div>
+        </md-toolbar>
+        <md-content>
+        <form name="$ctrl.form" novalidate>
+            <formly-form model="$ctrl.contact" fields="$ctrl.contactFields" options="$ctrl.options" form="$ctrl.form">
+            </formly-form>
+        </form>
+        </md-content>
+        <div ng-bind="$ctrl.log">
+
+        </div>
+</div>

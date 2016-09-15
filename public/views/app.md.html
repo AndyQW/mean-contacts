@@ -1,0 +1,24 @@
+<div id="app">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span>Contact Sample</span>
+                          <!-- fill up the space between left and right area -->
+                <span flex></span>
+                <md-button ng-click="$ctrl.login_wechat()" class="btn btn-primary" ng-disabled="$ctrl.rentalForm.$invalid">
+                Login
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <md-content>
+            <div class="box-inner padding" ui-view="">
+            </div>
+      </md-content>
+    </md-content>
+</div>
+
+<div class="modal fade sliding-modal popup-app-details multi-section-modal" id="modal_contactEditor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog app-details-container" role="document">
+            <contact-editor id="contact_editor" class="app-details-extended" style="height: 1837px;" ></contact-editor>
+        </div>
+</div>

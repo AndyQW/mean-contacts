@@ -1,0 +1,45 @@
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span>Contact Sample</span>
+                          <!-- fill up the space between left and right area -->
+                <span flex></span>
+           <md-button ng-click="$ctrl.new()" aria-label="menu" class="md-fab md-warn">
+         Add
+        </md-button>
+    
+        </div>
+
+    </md-toolbar>
+<md-content class="md-padding" layout-xs="column" layout-gt-sm="row" layout="column">
+    <div flex-gt-sm="20" flex>
+        <md-card ng-repeat="contact in $ctrl.contacts" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline" ng-bind="contact.first_name + ' ' + contact.last_name"></span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+          <md-content>
+          <md-list flex>
+              <md-list-item class="md-1-line" ng-repeat="field in $ctrl.fields">
+                <div class="md-list-item-text" layout="column">
+                  <p>{{field.title}} </p>
+                  <h4>{{contact[field.name]}}</h4>
+                </div>
+              </md-list-item>
+          </md-list>
+          <md-list flex>
+        
+          </md-content>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button ng-click="$ctrl.edit(contact)">Edit</md-button>
+              <md-button ng-click="$ctrl.delete(contact)">Delete</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-fab-trigger>
+
+        </md-fab-trigger>
+    </div>
+</md-content>
