@@ -8,6 +8,7 @@ var ContactSchema = new Mongoose.Schema({
     last_name: String,
     company: String,
     phone_number: String,
+    email: String,
     job_title: String,
     updated_at: { type: Date, default: Date.now },
 });

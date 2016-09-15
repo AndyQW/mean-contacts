@@ -6,7 +6,6 @@ var Contact     = require('../models/contact');
 
 ( function(Contacts) {
     Contacts.list = function(callback) {
-        console.log(Contact);
         Contact.find({}).exec(callback)
     }
 

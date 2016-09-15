@@ -3,8 +3,12 @@ angular.module('App')
         templateUrl: 'views/contacts.html',
         controller:  function ContactsCtrl($rootScope, $scope, Contacts) {
             ctrl = this;
-            ctrl.fields = [{title: 'job title', name: 'job_title' }, { title:' phone number',name:'phone_number',
-                }, { title: 'company', name: 'company'}]
+            ctrl.fields = [
+                  { title:' Phone Number',name:'phone_number',}
+                , { title: 'Email', name:'email'}
+                , { title: 'Company', name: 'company'}
+                , { title: 'Job Title', name: 'job_title' },
+                ]
             this.contacts = Contacts.GetContacts();
             this.active_contact;
             this.edit = function(contact) {
