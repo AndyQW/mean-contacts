@@ -56,7 +56,7 @@ angular.module('App')
                 type: 'input',
                 templateOptions: {
                     type: 'text',
-                    label: '',
+                    label: 'Company',
                     placeholder: 'Enter Company Name',
                     required: false
                 }
@@ -87,7 +87,7 @@ angular.module('App')
             $ctrl.contact = {};
         });
 
-        // Save Contact to remote server
+        // Save Contact to remote ExpServer
         $ctrl.ok = function(contact) {
             $rootScope.$emit('app.contact.save', contact);
             $rootScope.$emit('app.hide.contact.editor');    
