@@ -15,4 +15,4 @@ This is a small sample of MEAN stack contacts application using following techno
    3. npm install
    4. create "contacts" database in local mongodb ( 27017 )
    5. node index.js
-   6. broswer url : http://localhost:3000
+   6. browser url : http://localhost:3000
